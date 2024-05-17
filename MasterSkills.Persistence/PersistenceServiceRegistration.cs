@@ -1,4 +1,4 @@
-﻿using MasterSkill.Application.Contracts.Persistence;
+﻿using MasterSkills.Application.Contracts.Persistence;
 using MasterSkills.Persistence.DatabaseContext;
 using MasterSkills.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;

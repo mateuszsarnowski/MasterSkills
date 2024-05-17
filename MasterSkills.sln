@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4B59001B-FE0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9B40980B-6081-434A-8221-5BBA0B942C5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterSkills.Domain", "MasterSkills.Core\MasterSkills.Domain.csproj", "{1F7157A7-446C-407A-B5D0-D19163A42870}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterSkills.Domain", "MasterSkills.Core\MasterSkills.Domain.csproj", "{1F7157A7-446C-407A-B5D0-D19163A42870}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1A0EF043-82E5-45BE-BE2B-E32B600AB73D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterSkill.Application", "MasterSkill.Application\MasterSkill.Application.csproj", "{B1BE730E-EE4A-4CF2-9592-7D43F59CB5E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterSkills.Application", "MasterSkills.Application\MasterSkills.Application.csproj", "{B1BE730E-EE4A-4CF2-9592-7D43F59CB5E3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{DE092CDE-0D94-4D14-B662-D1B8731DD95D}"
 EndProject
@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{B7A5F11F-4520-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A2D54987-3E75-49A6-A9FF-A112DAD61169}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterSkills.Persistence", "MasterSkills.Persistence\MasterSkills.Persistence.csproj", "{8E45D4D7-AEE2-4755-BA94-68121EA9C582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterSkills.Persistence", "MasterSkills.Persistence\MasterSkills.Persistence.csproj", "{8E45D4D7-AEE2-4755-BA94-68121EA9C582}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterSkills.Infrastructure", "MasterSkills.Infrastructure\MasterSkills.Infrastructure.csproj", "{7C2A8D9F-39F9-4ACC-B881-51E5B3C5DE1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterSkills.Infrastructure", "MasterSkills.Infrastructure\MasterSkills.Infrastructure.csproj", "{7C2A8D9F-39F9-4ACC-B881-51E5B3C5DE1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

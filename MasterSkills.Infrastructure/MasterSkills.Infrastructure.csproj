@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MasterSkill.Application\MasterSkill.Application.csproj" />
+    <ProjectReference Include="..\MasterSkills.Application\MasterSkills.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿using MasterSkill.Application.Contracts.EmailSender;
-using MasterSkill.Application.Contracts.Logging;
-using MasterSkill.Application.Models;
+﻿using MasterSkills.Application.Contracts.EmailSender;
+using MasterSkills.Application.Contracts.Logging;
+using MasterSkills.Application.Models;
 using MasterSkills.Infrastructure.EmailService;
 using MasterSkills.Infrastructure.Logging;
 using Microsoft.Extensions.Configuration;

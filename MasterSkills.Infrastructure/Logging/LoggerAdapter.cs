@@ -1,4 +1,4 @@
-﻿using MasterSkill.Application.Contracts.Logging;
+﻿using MasterSkills.Application.Contracts.Logging;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

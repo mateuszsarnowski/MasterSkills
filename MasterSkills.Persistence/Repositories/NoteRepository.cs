@@ -1,4 +1,4 @@
-﻿using MasterSkill.Application.Contracts.Persistence;
+﻿using MasterSkills.Application.Contracts.Persistence;
 using MasterSkills.Domain.Entities.Notes;
 using MasterSkills.Persistence.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
