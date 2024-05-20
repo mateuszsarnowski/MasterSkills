@@ -14,9 +14,9 @@ namespace MasterSkills.Persistence.Configurations
         public void Configure(EntityTypeBuilder<NoteCategory> modelBuilder)
         {
             modelBuilder.HasData(
-                new NoteCategory { Id = 1, Name = "General" },
-                new NoteCategory { Id = 2, Name = "Work" },
-                new NoteCategory { Id = 3, Name = "Personal" }
+                new NoteCategory { Id = 1, CreatedAt = DateTime.UtcNow, Name = "General" },
+                new NoteCategory { Id = 2, CreatedAt = DateTime.UtcNow, Name = "Work" },
+                new NoteCategory { Id = 3, CreatedAt = DateTime.UtcNow, Name = "Personal" }
                 );
 
             modelBuilder.Property(q => q.Name)

@@ -1,0 +1,23 @@
+﻿@page "/"
+@rendermode InteractiveAuto
+<h3>Home</h3>
+
+@*  Preview list of all notes *@
+
+@if (_notes == null)
+{
+    <p> Loading... </p>
+}
+else if (_notes.Count == 0)
+{
+    <p> No notes found </p>
+}
+else
+{
+    <ul>
+        @foreach (var note in _notes)
+        {
+            <li>@note.Title</li>
+        }
+    </ul>
+}

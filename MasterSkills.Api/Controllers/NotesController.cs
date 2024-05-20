@@ -21,7 +21,7 @@ namespace MasterSkills.Api.Controllers
         {
             _mediator = mediator;
         }
-        // GET: api/<NotesController>
+
         [HttpGet]
         public async Task<List<NoteDto>> Get()
         {
@@ -29,7 +29,6 @@ namespace MasterSkills.Api.Controllers
             return notes;
         }
 
-        // GET api/<NotesController>/5
         [HttpGet("{id}")]
         public async Task<NoteDetailsDto> Get(int id)
         {
@@ -37,7 +36,6 @@ namespace MasterSkills.Api.Controllers
             return noteDetails;
         }
 
-        // POST api/<NotesController>
         [HttpPost]
         public async Task<ActionResult> Post(CreateNoteCommand note)
         {
@@ -45,7 +43,6 @@ namespace MasterSkills.Api.Controllers
             return CreatedAtAction(nameof(Get), new { id = response });
         }
 
-        // PUT api/<NotesController>/
         [HttpPut]
         public async Task<ActionResult> Put(UpdateNoteCommand note)
         {
@@ -53,7 +50,6 @@ namespace MasterSkills.Api.Controllers
             return NoContent();
         }
 
-        // DELETE api/<NotesController>/5
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {

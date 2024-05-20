@@ -4,6 +4,7 @@ using MasterSkills.Persistence.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MasterSkills.Persistence.Migrations
 {
     [DbContext(typeof(MasterSkillsDatabaseContext))]
-    partial class MasterSkillsDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240520102445_MinorChanges")]
+    partial class MinorChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,29 +89,6 @@ namespace MasterSkills.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NoteCategories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 5, 20, 10, 35, 50, 236, DateTimeKind.Utc).AddTicks(5322),
-                            IsDeleted = false,
-                            Name = "General"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2024, 5, 20, 10, 35, 50, 236, DateTimeKind.Utc).AddTicks(5337),
-                            IsDeleted = false,
-                            Name = "Work"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 5, 20, 10, 35, 50, 236, DateTimeKind.Utc).AddTicks(5339),
-                            IsDeleted = false,
-                            Name = "Personal"
-                        });
                 });
 
             modelBuilder.Entity("MasterSkills.Domain.Entities.Notes.Note", b =>
