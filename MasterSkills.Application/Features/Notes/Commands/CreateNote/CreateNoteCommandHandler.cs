@@ -31,6 +31,12 @@ namespace MasterSkills.Application.Features.Notes.Commands.CreateNote
 
             }
 
+            //var noteToCreate = new Domain.Entities.Notes.Note
+            //{
+            //    Title = request.Title,
+            //    Content = request.Content
+                
+            //};
             var noteToCreate = _mapper.Map<Domain.Entities.Notes.Note>(request);
             await _noteRepository.CreateAsync(noteToCreate);
 

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using MasterSkills.Domain.Entities.Notes;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace MasterSkills.Application.Features.Notes.Commands.CreateNote
     {
         public string Title { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
+
     }
 
 }

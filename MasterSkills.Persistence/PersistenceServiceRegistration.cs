@@ -14,7 +14,7 @@ public static class PersistenceServiceRegistration
         services.AddDbContext<MasterSkillsDatabaseContext>(options =>
         {
             // Use appsettings.json
-            options.UseSqlServer(configuration.GetConnectionString("MasterSkillsConnectionString"));
+            options.UseSqlServer(configuration.GetConnectionString("MasterSkillsConnectionString")).EnableSensitiveDataLogging();
         });
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
