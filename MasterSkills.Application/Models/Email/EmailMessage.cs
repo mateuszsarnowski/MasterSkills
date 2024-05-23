@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterSkills.Application.Models
+namespace MasterSkills.Application.Models.Email
 {
     public class EmailMessage
     {

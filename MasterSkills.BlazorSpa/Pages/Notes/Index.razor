@@ -1,0 +1,40 @@
+﻿@page "/notes/"
+
+
+<h3>Index</h3>
+
+<Button Color="ButtonColor.Success" Outline="true" @onclick="NavigateToCreateNote"> Add note </Button>
+
+@Message
+
+<AuthorizeView>
+    <Authorized>
+@if (Notes != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var note in Notes)
+            {
+                <tr>
+                    <td>@note.Id</td>
+                    <td>@note.Title</td>
+                    <td>
+                        <Button Color="ButtonColor.Primary" Outline="true" @onclick="() => NavigateToEditNote(note)">Edit</Button>
+                        <Button Color="ButtonColor.Info" Outline="true" @onclick="() => NavigateToDetails(note.Id)">Details</Button>
+                            <Button Color="ButtonColor.Danger" Outline="true" @onclick="() => DeleteNoteAsync(note.Id)">Delete</Button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+</Authorized>
+</AuthorizeView>
+

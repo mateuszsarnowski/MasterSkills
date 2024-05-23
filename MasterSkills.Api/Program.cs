@@ -1,4 +1,6 @@
+using MasterSkills.Api.Middleware;
 using MasterSkills.Application;
+using MasterSkills.Identity;
 using MasterSkills.Infrastructure;
 using MasterSkills.Persistence;
 
@@ -8,14 +10,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
 
-builder.Services.AddCors(options => {
+builder.Services.AddControllers();
+
+builder.Services.AddCors(options =>
+{
     options.AddPolicy("all", builder => builder.AllowAnyOrigin()
     .AllowAnyHeader()
     .AllowAnyMethod());
 });
 
-builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -31,6 +36,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("all");
+app.UseErrorHandlerMiddleware();
+
+app.UseStaticFiles();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

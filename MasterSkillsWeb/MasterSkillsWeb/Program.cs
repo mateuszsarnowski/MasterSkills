@@ -9,18 +9,10 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("CorsPolicy",
-        builder => builder
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
-});
-
 var uri = new Uri(builder.Configuration["ApiConfiguration:BaseUrl"] + "api/");
 builder.Services.AddWebClientServices(uri);
 
+builder.Services.AddBlazorBootstrap();
 
 var app = builder.Build();
 
@@ -39,7 +31,6 @@ else
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
-app.UseCors("CorsPolicy");
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()

@@ -5,6 +5,7 @@ using MasterSkills.Application.Features.Notes.Queries.Notes.GetAllNotes;
 using MasterSkills.Application.Features.Notes.Queries.Notes.GetNoteDetails;
 using MasterSkills.Domain.Entities.Notes;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,6 +14,7 @@ namespace MasterSkills.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class NotesController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -37,6 +39,9 @@ namespace MasterSkills.Api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> Post(CreateNoteCommand note)
         {
             var response = await _mediator.Send(note);
@@ -44,6 +49,10 @@ namespace MasterSkills.Api.Controllers
         }
 
         [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult> Put(UpdateNoteCommand note)
         {
             var response = await _mediator.Send(note);
@@ -51,6 +60,9 @@ namespace MasterSkills.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult> Delete(int id)
         {
             var command = new DeleteNoteCommand { Id = id };

@@ -11,7 +11,7 @@ namespace MasterSkills.Persistence.Repositories
         {
         }
 
-        public async Task<List<Note>> GetNotesByCategory(int categoryId)
+        public async Task<List<Note>> GetNotesByCategoryAsync(int categoryId)
         {
             var notes = await _context.Notes
                 .Where(n => n.NoteCategoryId == categoryId)

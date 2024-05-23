@@ -1,4 +1,4 @@
-﻿using MasterSkills.Application.Models;
+﻿using MasterSkills.Application.Models.Email;
 using System;
 using System.Collections.Generic;
 using System.Linq;

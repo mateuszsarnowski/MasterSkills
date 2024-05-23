@@ -5,6 +5,6 @@ namespace MasterSkills.Application.Contracts.Persistence
 {
     public interface INoteRepository : IGenericRepository<Note>
     {
-        Task<List<Note>> GetNotesByCategory(int categoryId);
+        Task<List<Note>> GetNotesByCategoryAsync(int categoryId);
     }
 }

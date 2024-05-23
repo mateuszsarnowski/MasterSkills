@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MasterSkills.Application.Models;
 using MasterSkills.Application.Contracts.EmailSender;
+using MasterSkills.Application.Models.Email;
 
 namespace MasterSkills.Infrastructure.EmailService
 {

@@ -1,0 +1,25 @@
+﻿@page "/"
+
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world! Welcome to MasterSkills Application.</h1>
+
+<p>This is a simple application to demonstrate the use of Blazor WebAssembly with ASP.NET Core Web API.</p>
+
+<p>Click on the <strong>Notes</strong> link in the navigation bar to view the list of notes.</p>
+
+<AuthorizeView>
+    <Authorized>
+        <p>You are logged in.</p>
+        <Button Color="ButtonColor.Danger" Outline="true" @onclick="Logout"> Logout </Button>
+
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not logged in. </p>
+        <div class="d-grid gap-2">
+            <Button Color="ButtonColor.Success" Outline="true" @onclick="NavigateToLogin"> Login </Button>
+            <Button Color="ButtonColor.Success" Outline="true" @onclick="NavigateToRegister"> Register </Button>
+        </div>
+    </NotAuthorized>
+</AuthorizeView>

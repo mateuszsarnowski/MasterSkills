@@ -1,12 +1,19 @@
 ﻿@page "/"
-@rendermode InteractiveAuto
+
+<PageTitle>Strona główna</PageTitle>
+
 <h3>Home</h3>
 
 @*  Preview list of all notes *@
 
 @if (_notes == null)
 {
-    <p> Loading... </p>
+    <PlaceholderContainer Animation="PlaceholderAnimation.Glow">
+        <Placeholder Width="PlaceholderWidth.Col7" />
+        <Placeholder Width="PlaceholderWidth.Col9" />
+        <Placeholder Width="PlaceholderWidth.Col6" />
+        <Placeholder Width="PlaceholderWidth.Col7" />
+    </PlaceholderContainer>
 }
 else if (_notes.Count == 0)
 {
